@@ -1,0 +1,14 @@
+body {
+  background: red;
+}
+#navbar {
+  height: 100px;
+}
+.success {
+  color: green;
+  transition: all ease-in 2s;
+}
+.error {
+  color: red;
+  transition: all ease-in 2s;
+}
