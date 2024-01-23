@@ -1,0 +1,21 @@
+{% if films %}
+<ul class="list-group">
+  {% for film in films %}
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    {{ film.name }}
+    <span
+      class="badge bg-danger rounded-pill"
+      style="cursor: pointer"
+      hx-delete="{% url 'delete-film' film.pk %}"
+      hx-target="#film-list"
+      hx-confirm="Confirm if you want to delete this film?"
+      >X</span
+    >
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="text-muted align-items-center justify-content-center">
+  <small>You dont have any films in your list. </small>
+</p>
+{% endif %}
