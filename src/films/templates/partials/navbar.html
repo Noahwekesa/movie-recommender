@@ -1,5 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="{% url 'index' %}">Movie List App</a>
+<style>
+  .nav-link:hover,
+  .nav-link:focus {
+    text-decoration: underline;
+    color: black;
+    font: bold;
+  }
+</style>
+
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light m-4 shadow-lg rounded"
+>
+  <a class="navbar-brand fw-bold" href="{% url 'index' %}">Movie List App</a>
   <button
     class="navbar-toggler"
     type="button"

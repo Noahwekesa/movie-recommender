@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http.response import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.views import LoginView
@@ -39,3 +40,8 @@ def check_username(request):
         return HttpResponse("<div id='username-error' class='text-danger'>This username already exists</div>")
     else:
         return HttpResponse("<div id='username-error' class='text-success'>This username is available </div>")
+
+
+@login_required
+def AddFilms(request):
+    return render(request, 'AddFilms.html')

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="conatiner col-5 offset-2  p-3 align-items-center">
+  <form>
+    <div class="mb-3">
+      <label for="film" class="form-label">Add Film</label>
+      <input type="film" class="form-control" id="Film" aria-describedby="emailHelp" />
+      <p class="text-muted text-sm"><small> Add Your Favourite Films.</small></p>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div id="film-list">
+    {% include "partials/film-list.html" %}
+  </div>
+</div>
+{% endblock content %}
